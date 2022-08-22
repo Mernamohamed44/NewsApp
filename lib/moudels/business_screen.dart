@@ -13,14 +13,7 @@ class BusinessScreen extends StatelessWidget {
         listener: (context,state){},
     builder:(context,state){
       var list=NewsCubit.get(context).business;
-          return ConditionalBuilder(
-          condition: state is!GetNewsLoadingState,
-          builder:(context)=>ListView.separated(
-            physics: ScrollPhysics(),
-    itemBuilder:(context,index)=> buildArticalItem( list![index],context),
-    separatorBuilder:(context,index)=>const Divider(),
-    itemCount: 7) ,
-    fallback: (context)=>const Center(child: CircularProgressIndicator()));
+          return buildScreenItem(list);
     });
 }
 }
