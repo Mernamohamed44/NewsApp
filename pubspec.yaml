@@ -38,7 +38,7 @@ dependencies:
   flutter_bloc:
   dio:
   conditional_builder_null_safety:
-
+  webview_flutter:
 dev_dependencies:
   flutter_test:
     sdk: flutter
