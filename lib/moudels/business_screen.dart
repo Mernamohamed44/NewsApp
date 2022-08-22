@@ -17,7 +17,7 @@ class BusinessScreen extends StatelessWidget {
           condition: state is!GetNewsLoadingState,
           builder:(context)=>ListView.separated(
             physics: ScrollPhysics(),
-    itemBuilder:(context,index)=> buildArticalItem( list![index]),
+    itemBuilder:(context,index)=> buildArticalItem( list![index],context),
     separatorBuilder:(context,index)=>const Divider(),
     itemCount: 7) ,
     fallback: (context)=>const Center(child: CircularProgressIndicator()));
